@@ -1,5 +1,6 @@
 # Word-Guess-Game
 Hangman with JavaScript
+
 This project is utilizing rudimentary Javascript to create a Hangman game that a user can interact with.
 The theme I chose for the project was Halloween. In all there are about 29 words to guess from.
 
