@@ -47,8 +47,8 @@ var winSong = new Audio(src="assets/monstermashy.mp3");
 
 //Function that resets the game.
 function resetGame() {
-    themeSong.play();
-    winSong.pause();
+    themeSong.play();//Starts theme song for the game
+    winSong.pause();//Pauses and makes sure winning song doses not play at same time as theme song.
     winSong.currentTime = 0;
     remainingGuesses = maxLives;//Resets users guesses to equal max lives
     gameStarted = false;//Lets computer know game is not in process yet
@@ -129,9 +129,9 @@ function checkWin() {
         document.getElementById("survivor").style.cssText = "display: block";//Displays the Winning Image.
         document.getElementById("halloween-pic").style.cssText = "display: none";//Hides the Halloween Party Picture. 
         wins++;//Adds wins.
-        themeSong.pause();
+        themeSong.pause();//Stops theme song.
         themeSong.currentTime = 0;
-        winSong.play();
+        winSong.play();//Plays winning song.
         winSong.currentTime = 15;
         gameComplete = true;//Notifies the computer that the game has finished and to reset.
     }
