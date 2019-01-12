@@ -40,16 +40,16 @@ var currentWordIndex;//Index where current word will be referenced from
 var guessingWord = [];//The word to be guessed at random
 var remainingGuesses = 0;//The number of guesses the user has
 var gameStarted = false;//Notifies computer if game has started
-var gameComplete = false;//Notifies computer if game is done
+var gameComplete = true;//Notifies computer if game is done
 var wins = 0;//The number of times the user has correctly guessed the word
 var themeSong = new Audio(src="assets/Halloween.mp3");
 var winSong = new Audio(src="assets/monstermashy.mp3");
 
 //Function that resets the game.
 function resetGame() {
-    themeSong.play();//Starts theme song for the game
-    winSong.pause();//Pauses and makes sure winning song doses not play at same time as theme song.
-    winSong.currentTime = 0;
+    //themeSong.play();//Starts theme song for the game
+    //winSong.pause();//Pauses and makes sure winning song doses not play at same time as theme song.
+    //winSong.currentTime = 0;
     remainingGuesses = maxLives;//Resets users guesses to equal max lives
     gameStarted = false;//Lets computer know game is not in process yet
     currentWordIndex = Math.floor(Math.random() * (spookyWords.length));//Random word is chosen from Spooky Words Array.
@@ -82,12 +82,15 @@ function gameDisplay() { //Main functionality of game. What user primarily inter
 };
 //Function that records user input
 document.onkeyup = function(event) { //When user presses a key it resets the game. I had trouble with this. As page is first loaded it resets. And I have to hit two keys to properly start the game.
+    console.log("Game completed", gameComplete);
     if(gameComplete){
         resetGame();
         gameComplete = false;
+        console.log(gameComplete, "Game Reset");
     }
     else { //States that if the user presses a key from "A" to "Z" it will fire userGuess function and convert the keycode to lowercase in case of user error.
         if(event.keyCode >=65 && event.keyCode <= 90) {
+            console.log("user pressed key");
             userGuess(event.key.toLowerCase());
         }
     }
@@ -129,10 +132,10 @@ function checkWin() {
         document.getElementById("survivor").style.cssText = "display: block";//Displays the Winning Image.
         document.getElementById("halloween-pic").style.cssText = "display: none";//Hides the Halloween Party Picture. 
         wins++;//Adds wins.
-        themeSong.pause();//Stops theme song.
-        themeSong.currentTime = 0;
-        winSong.play();//Plays winning song.
-        winSong.currentTime = 15;
+        //themeSong.pause();//Stops theme song.
+        //themeSong.currentTime = 0;
+        //winSong.play();//Plays winning song.
+        //winSong.currentTime = 15;
         gameComplete = true;//Notifies the computer that the game has finished and to reset.
     }
 };
