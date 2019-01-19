@@ -11,3 +11,5 @@ I used Bootstrap primarily to get the main layout of the page designed. Afterwar
 I did use Google Fonts ("Creepster", "Bangers") to fit my theme. If there are any compatability issues, please inform me. I wanted to add a more specific font that I found off of the internet, but in my research it seemed more complicated than using Google Fonts for the same effect.
 
 Lastly, please inform me on any copyright issues that might occur. Being that it was Halloween themed, I utilized John Carpenter's infamous score for the film 'Halloween' and the classic 'Monster Mash'. As I am still new to coding I am not fully aware to citing resources, but will gladly like to learn how, and will adapt in the near future.
+
+https://ajgasca.github.io/Word-Guess-Game/
