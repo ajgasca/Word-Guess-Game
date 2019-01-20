@@ -13,3 +13,5 @@ I did use Google Fonts ("Creepster", "Bangers") to fit my theme. If there are an
 Lastly, please inform me on any copyright issues that might occur. Being that it was Halloween themed, I utilized John Carpenter's infamous score for the film 'Halloween' and the classic 'Monster Mash'. As I am still new to coding I am not fully aware to citing resources, but will gladly like to learn how, and will adapt in the near future.
 
 https://ajgasca.github.io/Word-Guess-Game/
+
+Update: the bug that requires a user to press any key twice in order to start the game has been fixed.
